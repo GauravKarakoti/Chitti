@@ -1,0 +1,4 @@
+Driver/ffmpeg-2025-03-20-git-76f09ab647-full_build/bin/ffplay.exe filter=lfs diff=lfs merge=lfs -text
+Driver/ffmpeg-2025-03-20-git-76f09ab647-full_build/bin/ffmpeg.exe filter=lfs diff=lfs merge=lfs -text
+Driver/ffmpeg-2025-03-20-git-76f09ab647-full_build/bin/ffprobe.exe filter=lfs diff=lfs merge=lfs -text
+Driver/ffmpeg-2025-03-20-git-76f09ab647-full_build/bin/*.exe filter=lfs diff=lfs merge=lfs -text
