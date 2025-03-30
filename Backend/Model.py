@@ -7,8 +7,8 @@ env_vars = dotenv_values(".env")
 CohereAPIKey = env_vars.get("CohereAPIKey")
 
 # Ensure API key is available
-if not CohereAPIKey:
-    raise ValueError("Cohere API key not found. Please check your .env file.")
+# if not CohereAPIKey:
+#     raise ValueError("Cohere API key not found. Please check your .env file.")
 
 # Initialize Cohere Client
 co = cohere.Client(api_key=CohereAPIKey)
