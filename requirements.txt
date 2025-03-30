@@ -19,7 +19,6 @@ webdriver-manager
 matplotlib
 networkx 
 scikit-learn
-pyaudio>=0.2.14
 google-generativeai
 openai-whisper>=20231117
 langdetect
