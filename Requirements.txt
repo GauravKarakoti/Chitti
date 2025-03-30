@@ -19,12 +19,14 @@ webdriver-manager
 matplotlib
 networkx 
 scikit-learn
-pyaudio
+pyaudio>=0.2.14
 google-generativeai
-openai-whisper
+openai-whisper>=20231117
 langdetect
-torch
+torch>=2.2.0
 torchaudio
 setuptools-rust
 ffmpeg-python
 streamlit
+llvmlite==0.44.0
+numba==0.61.0
