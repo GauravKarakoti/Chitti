@@ -27,3 +27,4 @@ torch
 torchaudio
 setuptools-rust
 ffmpeg-python
+streamlit
