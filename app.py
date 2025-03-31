@@ -1,14 +1,9 @@
 import streamlit as st
 from Backend.Model import FirstLayerDMM
 from Backend.RealtimeSearchEngine import realtime_search_engine
-from Backend.Automation import Automation
 from Backend.SpeechToText import SpeechRecognition
 from Backend.ChatBot import chat_with_bot
 from Backend.TextToSpeech import TextToSpeech
-from dotenv import dotenv_values
-import asyncio
-import subprocess
-import threading
 
 Username = st.secrets["Username"]
 Assistantname = st.secrets["Assistantname"]
