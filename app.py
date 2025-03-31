@@ -10,10 +10,8 @@ import asyncio
 import subprocess
 import threading
 
-# Load environment variables
-env_vars = dotenv_values(".env")
-Username = env_vars.get("Username")
-Assistantname = env_vars.get("Assistantname")
+Username = st.secrets["Username"]
+Assistantname = st.secrets["Assistantname"]
 
 # Initialize session state
 if 'chat_history' not in st.session_state:

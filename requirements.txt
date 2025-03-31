@@ -1,4 +1,3 @@
-python-dotenv
 groq
 AppOpener
 pywhatkit

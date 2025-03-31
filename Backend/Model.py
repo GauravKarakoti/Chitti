@@ -1,14 +1,13 @@
 import cohere
 from rich import print
-from dotenv import dotenv_values
+import streamlit as st
 
 # Load environment variables
-env_vars = dotenv_values(".env")
-CohereAPIKey = env_vars.get("CohereAPIKey")
+CohereAPIKey = st.secrets["CohereAPIKey"]
 
 # Ensure API key is available
-# if not CohereAPIKey:
-#     raise ValueError("Cohere API key not found. Please check your .env file.")
+if not CohereAPIKey:
+    raise ValueError("Cohere API key not found. Please check your .env file.")
 
 # Initialize Cohere Client
 co = cohere.Client(api_key=CohereAPIKey)

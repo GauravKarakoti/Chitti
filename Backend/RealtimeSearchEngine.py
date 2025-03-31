@@ -2,14 +2,11 @@ from googlesearch import search
 from groq import Groq
 from json import load, dump
 import datetime
-from dotenv import dotenv_values
+import streamlit as st
 
-# Load environment variables from the .env file
-env_vars = dotenv_values(".env")
-
-Username = env_vars.get("Username", "User")
-Assistantname = env_vars.get("Assistantname", "Assistant")
-GROQ_API_KEY = env_vars.get("GROQ_API_KEY")
+Username = st.secrets["Username"]
+Assistantname = st.secrets["Assistantname"]
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 
 
 

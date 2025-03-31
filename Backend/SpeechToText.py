@@ -3,14 +3,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-from dotenv import dotenv_values
+import streamlit as st
 import os
 import mtranslate as mt
 import time
 
-# Load environment variables from the .env file with a fallback.
-env_vars = dotenv_values(".env")
-InputLanguage = env_vars.get("InputLanguage")  # Default to English
+InputLanguage = st.secrets["InputLanguage"]  # Default to English
 
 # Define the HTML code for the speech recognition interface.
 HtmlCode = '''<!DOCTYPE html>

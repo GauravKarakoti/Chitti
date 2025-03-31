@@ -1,12 +1,11 @@
 from groq import Groq
 from json import load, dump
 import datetime
-from dotenv import dotenv_values
+import streamlit as st
 
-env_vars = dotenv_values(".env")
-Username = env_vars.get("Username")
-Assistantname = env_vars.get("Assistantname")
-GROQ_API_KEY = env_vars.get("GROQ_API_KEY")
+Username = st.secrets["Username"]
+Assistantname = st.secrets["Assistantname"]
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 
 
 # Initialize the Groq client

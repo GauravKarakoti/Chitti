@@ -14,7 +14,7 @@ from Backend.Automation import Automation
 from Backend.SpeechToText import SpeechRecognition
 from Backend.ChatBot import chat_with_bot
 from Backend.TextToSpeech import TextToSpeech
-from dotenv import dotenv_values
+import streamlit as st
 from asyncio import run
 from time import sleep
 import subprocess
@@ -29,9 +29,8 @@ class Communicate(QObject):
 
 comm = Communicate()
 
-env_vars = dotenv_values(".env")
-Username = env_vars.get("Username")
-Assistantname = env_vars.get("Assistantname")
+Username = st.secrets["Username"]
+Assistantname = st.secrets["Assistantname"]
 DefaultMessage = f'''{Username} : Hello {Assistantname}, How are you?
 {Assistantname} : Welcome {Username}. I am doing well. How may i help you?'''
 subprocesses = []

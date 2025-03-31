@@ -3,11 +3,9 @@ import random
 import asyncio
 import edge_tts # Import edge_tts for text-to-sp
 import os # Import os for file path handling
-from dotenv import dotenv_values # Import dotenv
+import streamlit as st
 
-# Load environment variables from a .env file
-env_vars = dotenv_values(".env")
-AssistantVoice = env_vars.get("AssistantVoice")
+AssistantVoice = st.secrets["AssistantVoice"]
 
 # Asynchronous function to convert text to an aud
 async def TextToAudioFile(text) -> None:

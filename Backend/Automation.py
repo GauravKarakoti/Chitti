@@ -10,11 +10,9 @@ import requests
 import keyboard
 import asyncio
 import os # Import os for operating system functionalitie
-from dotenv import load_dotenv
-# Load environment variables from the .env file.
-load_dotenv()
-# env_vars = dotenv_values(".env")
-GROQ_API_KEY = os.getenv("GroqAPIKey")
+import streamlit as st
+
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 
 classes = ["zCubwf", "hgKElc", "LTKOO sY7ric", "Z0LcW", "gsrt vk_bk FzvWSb YwPhnf", "pclqee", "tw-Data-text tw-text-small tw-ta",
 "IZ6rdc", "05uR6d LTKOO", "vlzY6d", "webanswers-webanswers_table_webanswers-table", "dDoNo ikb4Bb gsrt", "sXLa0e",
