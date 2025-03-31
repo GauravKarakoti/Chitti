@@ -62,11 +62,16 @@ with open(html_file_path, "w", encoding="utf-8") as f:
 
 # Set Chrome options for the WebDriver.
 chrome_options = Options()
-user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.142.86 Safari/537.36"
+user_agent = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+              "AppleWebKit/537.36 (KHTML, like Gecko) "
+              "Chrome/89.0.142.86 Safari/537.36 Brave/89.0.142.86")
 chrome_options.add_argument(f"user-agent={user_agent}")
 chrome_options.add_argument("--use-fake-ui-for-media-stream")
 chrome_options.add_argument("--use-fake-device-for-media-stream")
+# If you’re running in a cloud environment, you might want to remove headless mode for speech APIs
 chrome_options.add_argument("--headless=new")
+# Specify the Chromium binary if needed (check your platform's install path)
+chrome_options.binary_location = "/usr/bin/chromium"
 
 # Initialize the Chrome WebDriver using the ChromeDriverManager.
 service = Service(ChromeDriverManager().install())
