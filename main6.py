@@ -11,7 +11,7 @@ GetAssistantStatus )
 from Backend.Model import FirstLayerDMM
 from Backend.RealtimeSearchEngine import realtime_search_engine
 from Backend.Automation import Automation
-from Backend.SpeechToText import SpeechRecognition
+from Backend.SpeechToText2 import SpeechRecognition
 from Backend.ChatBot import chat_with_bot
 from Backend.TextToSpeech import TextToSpeech
 import streamlit as st

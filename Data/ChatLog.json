@@ -182,5 +182,21 @@
     {
         "role": "assistant",
         "content": "Hi!"
+    },
+    {
+        "role": "user",
+        "content": "Hello hello hello"
+    },
+    {
+        "role": "assistant",
+        "content": "You're saying hello again! Hi back to you!"
+    },
+    {
+        "role": "user",
+        "content": "Hello hello hello."
+    },
+    {
+        "role": "assistant",
+        "content": "You're saying hello a lot! Hi back to you!"
     }
 ]
